@@ -1,0 +1,954 @@
+# Copyright (C) 2026 Colorlib
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Industry 1.0.0\n"
+"Report-Msgid-Bugs-To: https://colorlib.com/\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Colorlib\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-25T10:06:50+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: industry\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Industry"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://colorlib.com/wp/themes/industry/"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A block theme for industrial manufacturers, engineering contractors and construction firms. Services and market sectors, a project mosaic with a lightbox, counters, client reviews beside a video, a quote request form, contact and newsletter forms that need no plugin — eight colour palettes, five type pairings, visitor dark mode and WooCommerce support. Full site editing throughout."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Colorlib"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://colorlib.com/"
+msgstr ""
+
+#: functions.php:71
+msgid "Eyebrow"
+msgstr ""
+
+#: functions.php:74
+msgid "Bordered box"
+msgstr ""
+
+#: functions.php:77
+msgid "Dark"
+msgstr ""
+
+#: functions.php:78
+msgid "Outline"
+msgstr ""
+
+#: functions.php:81
+msgid "Accent bar"
+msgstr ""
+
+#: functions.php:84
+msgid "Plain icons"
+msgstr ""
+
+#: functions.php:132
+msgid "Video"
+msgstr ""
+
+#: functions.php:133
+msgid "Close video"
+msgstr ""
+
+#. translators: %d: slide number.
+#: functions.php:135
+#, php-format
+msgid "Show review %d"
+msgstr ""
+
+#: functions.php:136
+msgid "Client reviews"
+msgstr ""
+
+#: functions.php:150
+msgid "Industry: sections"
+msgstr ""
+
+#: functions.php:151
+msgid "Full-width sections for building pages."
+msgstr ""
+
+#: functions.php:154
+msgid "Industry: pages"
+msgstr ""
+
+#: functions.php:155
+msgid "Complete page layouts."
+msgstr ""
+
+#: inc/enquiry.php:48
+msgid "Your name"
+msgstr ""
+
+#: inc/enquiry.php:54
+msgid "Email address"
+msgstr ""
+
+#: inc/enquiry.php:63
+msgid "Service"
+msgstr ""
+
+#: inc/enquiry.php:69
+msgid "Company"
+msgstr ""
+
+#: inc/enquiry.php:77
+msgid "Phone number"
+msgstr ""
+
+#: inc/enquiry.php:83
+msgid "Project details: site, scope and timing"
+msgstr ""
+
+#: inc/enquiry.php:92
+msgid "Subject"
+msgstr ""
+
+#: inc/enquiry.php:97
+msgid "Message"
+msgstr ""
+
+#: inc/enquiry.php:132
+msgid "Planned maintenance"
+msgstr ""
+
+#: inc/enquiry.php:133
+msgid "Design and build"
+msgstr ""
+
+#: inc/enquiry.php:134
+msgid "Breakdown and repair"
+msgstr ""
+
+#: inc/enquiry.php:135
+msgid "Process piping and plant rooms"
+msgstr ""
+
+#: inc/enquiry.php:136
+msgid "Steelwork and structures"
+msgstr ""
+
+#: inc/enquiry.php:137
+msgid "Something else"
+msgstr ""
+
+#: inc/enquiry.php:253
+msgid "Request free quote"
+msgstr ""
+
+#: inc/enquiry.php:254
+msgid "Send message"
+msgstr ""
+
+#: inc/enquiry.php:255
+msgid "Subscribe"
+msgstr ""
+
+#: inc/enquiry.php:281
+msgid "Leave this field empty"
+msgstr ""
+
+#: inc/enquiry.php:338
+msgid "Thank you — your request is with our estimating team. An engineer will call or email within one working day."
+msgstr ""
+
+#: inc/enquiry.php:339
+msgid "Thank you — your message is with us. We will reply by email shortly."
+msgstr ""
+
+#: inc/enquiry.php:340
+msgid "Thank you — you are on the list for the next newsletter."
+msgstr ""
+
+#: inc/enquiry.php:345
+msgid "Please check the form: every field marked * needs an answer."
+msgstr ""
+
+#: inc/enquiry.php:346
+msgid "That email address does not look right."
+msgstr ""
+
+#: inc/enquiry.php:347
+msgid "Sorry, that could not be sent. Please call or email us instead."
+msgstr ""
+
+#: inc/enquiry.php:348
+msgid "That form had been open a while and expired. Please send it again."
+msgstr ""
+
+#. translators: %s: site name.
+#: inc/enquiry.php:489
+#, php-format
+msgid "[%s] Quote request"
+msgstr ""
+
+#. translators: %s: site name.
+#: inc/enquiry.php:491
+#, php-format
+msgid "[%s] Website message"
+msgstr ""
+
+#. translators: %s: site name.
+#: inc/enquiry.php:493
+#, php-format
+msgid "[%s] Newsletter sign-up"
+msgstr ""
+
+#: inc/front-page-setup.php:33
+msgid "Home"
+msgstr ""
+
+#: inc/front-page-setup.php:38
+msgid "About"
+msgstr ""
+
+#: inc/front-page-setup.php:43
+msgid "Services"
+msgstr ""
+
+#: inc/front-page-setup.php:48
+msgid "Projects"
+msgstr ""
+
+#: inc/front-page-setup.php:53
+msgid "Blog"
+msgstr ""
+
+#: inc/front-page-setup.php:58
+msgid "Contact"
+msgstr ""
+
+#: inc/front-page-setup.php:316
+msgid "Primary"
+msgstr ""
+
+#: inc/scheme.php:97
+#: inc/scheme.php:130
+msgid "Switch to dark mode"
+msgstr ""
+
+#: inc/scheme.php:98
+msgid "Switch to light mode"
+msgstr ""
+
+#. translators: 1: the update host, 2: the list of values sent, 3: filter name.
+#: inc/updates.php:198
+#, php-format
+msgid "Industry checks %1$s for updates twice a day and sends %2$s. No personal data and no site name is sent, and the identifier is a one-way hash. Add the %3$s filter to switch it off."
+msgstr ""
+
+#: patterns/about-quote.php
+msgctxt "Pattern title"
+msgid "About with the quote form"
+msgstr ""
+
+#: patterns/about-quote.php
+msgctxt "Pattern description"
+msgid "The company's story and a button beside the quote request form on a darkened photograph of valves."
+msgstr ""
+
+#: patterns/contact.php
+msgctxt "Pattern title"
+msgid "Contact: map, details and form"
+msgstr ""
+
+#: patterns/contact.php
+msgctxt "Pattern description"
+msgid "A map across the width, then the address, phone and email beside the message form."
+msgstr ""
+
+#: patterns/counters.php
+msgctxt "Pattern title"
+msgid "Counters on a photograph"
+msgstr ""
+
+#: patterns/counters.php
+msgctxt "Pattern description"
+msgid "Four figures in ringed brand-colour discs over a darkened warehouse; they count up when scrolled into view."
+msgstr ""
+
+#: patterns/features.php
+msgctxt "Pattern title"
+msgid "Features: three hexagon icons"
+msgstr ""
+
+#: patterns/features.php
+msgctxt "Pattern description"
+msgid "Three services, each under a hexagon icon that fills with the brand colour on hover."
+msgstr ""
+
+#: patterns/feedback-light.php
+msgctxt "Pattern title"
+msgid "Client reviews on a pale ground"
+msgstr ""
+
+#: patterns/feedback-light.php
+msgctxt "Pattern description"
+msgid "The reviews and the play tile on the pale ground, as the template's inner pages have it."
+msgstr ""
+
+#: patterns/feedback.php
+msgctxt "Pattern title"
+msgid "Client reviews on a photograph"
+msgstr ""
+
+#: patterns/feedback.php
+msgctxt "Pattern description"
+msgid "A play tile that opens the film, beside a slider of client reviews with star ratings, over a darkened foundry."
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer"
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern description"
+msgid "Three columns on the dark ground — about and copyright, a newsletter sign-up, and social links."
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "Header"
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern description"
+msgid "The template's two rows: a charcoal bar with social links, phone and email, over the logo and the navigation."
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "Hero"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "Full-screen photograph of a port at dusk with a spaced eyebrow, the headline, a line of copy and a button."
+msgstr ""
+
+#: patterns/hidden-404-banner.php
+msgctxt "Pattern title"
+msgid "Not found banner"
+msgstr ""
+
+#: patterns/hidden-404-banner.php
+msgctxt "Pattern description"
+msgid "The banner of the page that is not there."
+msgstr ""
+
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "404 content"
+msgstr ""
+
+#: patterns/hidden-404.php
+msgctxt "Pattern description"
+msgid "What a visitor sees when nothing is there."
+msgstr ""
+
+#: patterns/hidden-archive-banner.php
+msgctxt "Pattern title"
+msgid "Archive banner"
+msgstr ""
+
+#: patterns/hidden-archive-banner.php
+msgctxt "Pattern description"
+msgid "The banner an archive title sits on."
+msgstr ""
+
+#: patterns/hidden-blog-banner.php
+msgctxt "Pattern title"
+msgid "Blog banner"
+msgstr ""
+
+#: patterns/hidden-blog-banner.php
+msgctxt "Pattern description"
+msgid "The heading for the posts page."
+msgstr ""
+
+#: patterns/hidden-comments.php
+msgctxt "Pattern title"
+msgid "Comments"
+msgstr ""
+
+#: patterns/hidden-comments.php
+msgctxt "Pattern description"
+msgid "The comments and the reply form for a single post."
+msgstr ""
+
+#: patterns/hidden-page-banner.php
+msgctxt "Pattern title"
+msgid "Page banner"
+msgstr ""
+
+#: patterns/hidden-page-banner.php
+msgctxt "Pattern description"
+msgid "The photograph banner a page title sits on."
+msgstr ""
+
+#: patterns/hidden-post-meta.php
+msgctxt "Pattern title"
+msgid "Post meta"
+msgstr ""
+
+#: patterns/hidden-post-meta.php
+msgctxt "Pattern description"
+msgid "Categories, date and author for a single post."
+msgstr ""
+
+#: patterns/hidden-posts-list.php
+msgctxt "Pattern title"
+msgid "Posts list"
+msgstr ""
+
+#: patterns/hidden-posts-list.php
+msgctxt "Pattern description"
+msgid "The post list used by the blog and every archive: photograph, categories, title, excerpt."
+msgstr ""
+
+#: patterns/hidden-search-banner.php
+msgctxt "Pattern title"
+msgid "Search banner"
+msgstr ""
+
+#: patterns/hidden-search-banner.php
+msgctxt "Pattern description"
+msgid "The banner search results sit under."
+msgstr ""
+
+#: patterns/hidden-single-banner.php
+msgctxt "Pattern title"
+msgid "Post banner"
+msgstr ""
+
+#: patterns/hidden-single-banner.php
+msgctxt "Pattern description"
+msgid "The photograph banner a post title sits on."
+msgstr ""
+
+#: patterns/latest-posts.php
+msgctxt "Pattern title"
+msgid "Latest posts: three cards"
+msgstr ""
+
+#: patterns/latest-posts.php
+msgctxt "Pattern description"
+msgid "The three most recent posts, each with a photograph, author, date, comments and excerpt."
+msgstr ""
+
+#: patterns/page-about.php
+msgctxt "Pattern title"
+msgid "Page: about"
+msgstr ""
+
+#: patterns/page-about.php
+msgctxt "Pattern description"
+msgid "A complete about page, built from the theme's sections, as the template lays it out."
+msgstr ""
+
+#: patterns/page-contact.php
+msgctxt "Pattern title"
+msgid "Page: contact"
+msgstr ""
+
+#: patterns/page-contact.php
+msgctxt "Pattern description"
+msgid "A complete contact page, built from the theme's sections, as the template lays it out."
+msgstr ""
+
+#: patterns/page-home.php
+msgctxt "Pattern title"
+msgid "Page: home"
+msgstr ""
+
+#: patterns/page-home.php
+msgctxt "Pattern description"
+msgid "A complete home page, built from the theme's sections, as the template lays it out."
+msgstr ""
+
+#: patterns/page-projects.php
+msgctxt "Pattern title"
+msgid "Page: projects"
+msgstr ""
+
+#: patterns/page-projects.php
+msgctxt "Pattern description"
+msgid "A complete projects page, built from the theme's sections, as the template lays it out."
+msgstr ""
+
+#: patterns/page-services.php
+msgctxt "Pattern title"
+msgid "Page: services"
+msgstr ""
+
+#: patterns/page-services.php
+msgctxt "Pattern description"
+msgid "A complete services page, built from the theme's sections, as the template lays it out."
+msgstr ""
+
+#: patterns/process.php
+msgctxt "Pattern title"
+msgid "Process: four steps"
+msgstr ""
+
+#: patterns/process.php
+msgctxt "Pattern description"
+msgid "Four numbered steps from survey to maintenance, each under a brand-colour rule."
+msgstr ""
+
+#: patterns/projects-all.php
+msgctxt "Pattern title"
+msgid "Projects: seven photographs"
+msgstr ""
+
+#: patterns/projects-all.php
+msgctxt "Pattern description"
+msgid "Seven captioned project photographs: the mosaic and a row of three beneath it."
+msgstr ""
+
+#: patterns/projects.php
+msgctxt "Pattern title"
+msgid "Projects: four photographs"
+msgstr ""
+
+#: patterns/projects.php
+msgctxt "Pattern description"
+msgid "Four captioned project photographs in the template's mosaic, enlarging on click."
+msgstr ""
+
+#: patterns/sectors-all.php
+msgctxt "Pattern title"
+msgid "Sectors: six photograph cards"
+msgstr ""
+
+#: patterns/sectors-all.php
+msgctxt "Pattern description"
+msgid "Six market sectors in two rows of three photograph cards."
+msgstr ""
+
+#: patterns/sectors.php
+msgctxt "Pattern title"
+msgid "Sectors: three photograph cards"
+msgstr ""
+
+#: patterns/sectors.php
+msgctxt "Pattern description"
+msgid "Three market sectors, each a photograph that zooms on hover, a title and a line of copy."
+msgstr ""
+
+#: patterns/sidebar.php
+msgctxt "Pattern title"
+msgid "Sidebar"
+msgstr ""
+
+#: patterns/sidebar.php
+msgctxt "Pattern description"
+msgid "Search, categories, recent posts, archive and tags, each in a bordered box."
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Surface"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Muted"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Primary deep"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Brand"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Accent deep"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "On accent"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Dark"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Charcoal"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Divider"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "Overlay"
+msgstr ""
+
+#: theme.json
+#: styles/colors/colors-1-industry.json
+#: styles/colors/colors-2-hi-vis.json
+#: styles/colors/colors-3-steel.json
+#: styles/colors/colors-4-signal.json
+#: styles/colors/colors-5-machine.json
+#: styles/colors/colors-6-copper.json
+#: styles/colors/colors-7-night-shift.json
+#: styles/colors/colors-8-graphite.json
+msgctxt "Color name"
+msgid "On dark"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Poppins"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Oswald"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "X Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "X Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Display"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "20"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "30"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "40"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "50"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "60"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "70"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "80"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Card"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page without banner"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page with sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Post without sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr ""
+
+#: styles/colors/colors-1-industry.json
+msgctxt "Style variation name"
+msgid "Industry"
+msgstr ""
+
+#: styles/colors/colors-2-hi-vis.json
+msgctxt "Style variation name"
+msgid "Hi-vis"
+msgstr ""
+
+#: styles/colors/colors-3-steel.json
+msgctxt "Style variation name"
+msgid "Steel"
+msgstr ""
+
+#: styles/colors/colors-4-signal.json
+msgctxt "Style variation name"
+msgid "Signal"
+msgstr ""
+
+#: styles/colors/colors-5-machine.json
+msgctxt "Style variation name"
+msgid "Machine"
+msgstr ""
+
+#: styles/colors/colors-6-copper.json
+msgctxt "Style variation name"
+msgid "Copper"
+msgstr ""
+
+#: styles/colors/colors-7-night-shift.json
+msgctxt "Style variation name"
+msgid "Night shift"
+msgstr ""
+
+#: styles/colors/colors-8-graphite.json
+msgctxt "Style variation name"
+msgid "Graphite"
+msgstr ""
+
+#: styles/typography/type-1-poppins.json
+msgctxt "Style variation name"
+msgid "Poppins throughout"
+msgstr ""
+
+#: styles/typography/type-2-oswald-poppins.json
+msgctxt "Style variation name"
+msgid "Oswald headings, Poppins text"
+msgstr ""
+
+#: styles/typography/type-3-poppins-system.json
+msgctxt "Style variation name"
+msgid "Poppins headings, system text"
+msgstr ""
+
+#: styles/typography/type-4-oswald-system.json
+msgctxt "Style variation name"
+msgid "Oswald headings, system text"
+msgstr ""
+
+#: styles/typography/type-5-system.json
+msgctxt "Style variation name"
+msgid "System fonts"
+msgstr ""

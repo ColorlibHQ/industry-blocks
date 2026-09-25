@@ -1,0 +1,1586 @@
+/*
+Theme Name: Industry
+Theme URI: https://colorlib.com/wp/themes/industry/
+Author: Colorlib
+Author URI: https://colorlib.com/
+Description: A block theme for industrial manufacturers, engineering contractors and construction firms. Services and market sectors, a project mosaic with a lightbox, counters, client reviews beside a video, a quote request form, contact and newsletter forms that need no plugin — eight colour palettes, five type pairings, visitor dark mode and WooCommerce support. Full site editing throughout.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Update URI: https://updates.colorlib.com/theme/industry.json
+Text Domain: industry
+Tags: blog, portfolio, full-site-editing, block-patterns, block-styles, template-editing, wide-blocks, accessibility-ready, translation-ready, custom-colors, custom-menu, custom-logo, featured-images, threaded-comments, one-column, two-columns, right-sidebar, rtl-language-support, sticky-post, theme-options
+
+Industry WordPress Theme, (C) 2026 Colorlib.
+Industry is distributed under the terms of the GNU GPL v2 or later.
+
+Industry bundles the following third-party resources:
+
+Poppins and Oswald
+License: SIL Open Font License 1.1, https://openfontlicense.org/
+Source: https://fontsource.org/
+
+Tabler Icons
+License: MIT, https://github.com/tabler/tabler-icons/blob/main/LICENSE
+Source: https://tabler.io/icons
+
+Photographs
+License: Pexels License
+Source: Pexels; readme.txt lists each photograph's page
+*/
+
+/*
+ * A block theme styles itself from theme.json. What lives here is what
+ * theme.json cannot express: the component styles behind the block style
+ * variations registered in functions.php, the header's layout and sticky
+ * behaviour, the icons, the hover states and the few layout corrections a
+ * full-width design needs.
+ *
+ * This file is also the editor stylesheet (add_editor_style), so a card, a
+ * counter or an icon looks the same while it is being edited.
+ *
+ * Every colour is a palette variable, which is what lets all eight palettes,
+ * and dark mode, restyle every component.
+ */
+
+:root {
+	/* The header's height, which the hero subtracts from the screen. */
+	--industry-header-height: 6.875rem;
+}
+
+@media (max-width: 767px) {
+	:root {
+		--industry-header-height: 4.5rem;
+	}
+}
+
+/* ==========================================================================
+   Screen reader text
+   ========================================================================== */
+
+.screen-reader-text {
+	border: 0;
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: var(--wp--preset--color--base);
+	clip-path: none;
+	color: var(--wp--preset--color--contrast);
+	display: block;
+	height: auto;
+	left: 6px;
+	padding: 15px 23px 14px;
+	top: 7px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* ==========================================================================
+   Layout rhythm
+
+   WordPress separates the top-level pieces of a page — header, main, footer —
+   and every full-width section inside a page's content with the root block
+   gap. On a design built from bands, that gap is a strip of bare page between
+   every pair of sections. Sections carry their own padding, so they meet edge
+   to edge instead.
+   ========================================================================== */
+
+.wp-site-blocks > * {
+	margin-block-start: 0;
+}
+
+.wp-block-post-content > .alignfull + .alignfull {
+	margin-block-start: 0;
+}
+
+/*
+ * A page built from sections needs no padding of its own. A page of ordinary
+ * paragraphs still needs room to breathe, so the page templates pad their
+ * content only where it does not start or end with a full-width section.
+ */
+.industry-page-content:not(:has(> .alignfull:first-child)) {
+	padding-top: var(--wp--preset--spacing--80);
+}
+
+.industry-page-content:not(:has(> .alignfull:last-child)) {
+	padding-bottom: var(--wp--preset--spacing--80);
+}
+
+/* An <iframe> is inline, and auto margins do not centre an inline box. */
+.industry-map {
+	display: block;
+}
+
+a {
+	text-underline-offset: 0.18em;
+}
+
+/* ==========================================================================
+   Header
+
+   Two rows, as the template has it: a charcoal bar with the social links on
+   the left and the phone and email on the right, then the white row with the
+   logo and the navigation. The whole header stays at the top of the screen
+   and gains a shadow once the page scrolls (assets/js/interactions.js adds
+   `is-scrolled`).
+   ========================================================================== */
+
+.wp-site-blocks > header.wp-block-template-part {
+	position: sticky;
+	top: var(--wp-admin--admin-bar--height, 0px);
+	z-index: 100;
+}
+
+/* Below 600px the admin bar scrolls away with the page. */
+@media (max-width: 600px) {
+	.wp-site-blocks > header.wp-block-template-part {
+		top: 0;
+	}
+}
+
+.industry-header {
+	position: relative;
+	/* A group with a background gets core's 1.25em of padding; the rows
+	   carry their own height. */
+	padding-top: 0;
+	padding-bottom: 0;
+	transition: box-shadow 0.4s ease;
+}
+
+.industry-header.is-scrolled {
+	box-shadow: var(--wp--preset--shadow--header);
+}
+
+.industry-header > * {
+	margin-block: 0;
+}
+
+.industry-topbar {
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: var(--wp--preset--font-size--x-small);
+}
+
+.industry-topbar__row {
+	min-height: 2.5rem;
+}
+
+.industry-topbar__contacts {
+	margin: 0;
+	white-space: nowrap;
+}
+
+.industry-topbar__contacts a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.industry-topbar__contacts a + a {
+	margin-left: 1.25rem;
+}
+
+.industry-topbar__contacts a:hover,
+.industry-topbar__contacts a:focus-visible {
+	text-decoration: underline;
+}
+
+/* The template hides its top bar on a phone. */
+@media (max-width: 767px) {
+	.industry-header > .industry-topbar {
+		display: none;
+	}
+}
+
+.industry-header__main {
+	min-height: 4.375rem;
+}
+
+.industry-header__brand {
+	flex: none;
+}
+
+/*
+ * The site title carries the firm's mark: three petals, as the template's
+ * logo, drawn as a mask in the brand colour so it follows the palette. A site
+ * with its own logo uploaded shows the logo and drops the name, as the
+ * template's single logo image does.
+ */
+.industry-header .wp-block-site-title {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	margin: 0;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.industry-header .wp-block-site-title::before {
+	content: "";
+	flex: none;
+	width: 1.375rem;
+	height: 1.625rem;
+	background-color: var(--wp--preset--color--brand);
+	-webkit-mask: url("assets/icons/mark.svg") center / contain no-repeat;
+	mask: url("assets/icons/mark.svg") center / contain no-repeat;
+}
+
+.industry-header .wp-block-site-logo:has(img) ~ .wp-block-site-title {
+	display: none;
+}
+
+.industry-header .wp-block-site-title a {
+	text-decoration: none;
+}
+
+.industry-header .wp-block-navigation__container {
+	gap: 0.25rem 1.5rem;
+}
+
+.industry-header .wp-block-navigation-item__content {
+	color: var(--wp--preset--color--contrast);
+	text-decoration: none;
+	transition: color 0.25s ease;
+}
+
+.industry-header .wp-block-navigation a.wp-block-navigation-item__content:hover,
+.industry-header .wp-block-navigation a.wp-block-navigation-item__content:focus-visible,
+.industry-header .wp-block-navigation .current-menu-item > a.wp-block-navigation-item__content {
+	color: var(--wp--preset--color--primary);
+}
+
+.industry-header .wp-block-navigation__submenu-container {
+	border: 0;
+	box-shadow: 0 0 30px rgb(127 137 161 / 0.25);
+	padding: 0.625rem;
+}
+
+/*
+ * Core switches the navigation to its menu button below 600px; the template
+ * collapses at 960px, where six links and the logo stop fitting on one row.
+ */
+@media (max-width: 959px) {
+	.industry-header .wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: flex;
+	}
+
+	.industry-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+		display: none;
+	}
+
+	.industry-header .wp-block-navigation__responsive-container-open {
+		color: var(--wp--preset--color--contrast);
+	}
+
+	.industry-header .wp-block-navigation__responsive-container-open svg {
+		width: 28px;
+		height: 28px;
+	}
+
+	.industry-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
+		font-size: 0.875rem;
+		padding: 0.35rem 0;
+	}
+}
+
+/* ==========================================================================
+   The dark-mode switch (inc/scheme.php). Here rather than in scheme.css so
+   the editor, which loads this file, draws it as the icon it is.
+   ========================================================================== */
+
+.wp-block-button.industry-scheme-toggle > .wp-block-button__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	padding: 0;
+	width: 44px;
+	height: 44px;
+	min-width: 0;
+	border-radius: 50%;
+	background: transparent;
+	color: var(--wp--preset--color--contrast);
+}
+
+.wp-block-button.industry-scheme-toggle > .wp-block-button__link:hover,
+.wp-block-button.industry-scheme-toggle > .wp-block-button__link:focus-visible {
+	background: color-mix(in srgb, currentColor 10%, transparent);
+	color: var(--wp--preset--color--primary);
+}
+
+.wp-block-button.industry-scheme-toggle > .wp-block-button__link::before {
+	content: "";
+	width: 1.1rem;
+	height: 1.1rem;
+	flex: 0 0 auto;
+	background-color: currentColor;
+	/* A moon, and a sun in dark mode, masked so they take the button's colour. */
+	-webkit-mask: var(--industry-scheme-icon) center / contain no-repeat;
+	mask: var(--industry-scheme-icon) center / contain no-repeat;
+	--industry-scheme-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================================
+   Icons
+
+   Tabler Icons, used as masks: the SVG supplies the shape and the element's
+   own colour fills it, so an icon takes whatever palette is active and turns
+   over in dark mode with no extra files. Each name sets --industry-icon, so
+   the class can sit on a paragraph block without masking the paragraph.
+   ========================================================================== */
+
+.industry-icon--tool { --industry-icon: url("assets/icons/tool.svg"); }
+.industry-icon--building-factory-2 { --industry-icon: url("assets/icons/building-factory-2.svg"); }
+.industry-icon--urgent { --industry-icon: url("assets/icons/urgent.svg"); }
+.industry-icon--phone { --industry-icon: url("assets/icons/phone.svg"); }
+.industry-icon--mail { --industry-icon: url("assets/icons/mail.svg"); }
+.industry-icon--home { --industry-icon: url("assets/icons/home.svg"); }
+
+/* ==========================================================================
+   Type details
+   ========================================================================== */
+
+/* Eyebrow (block style: paragraph › Eyebrow): the hero's spaced capitals. */
+.is-style-industry-eyebrow {
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 300;
+	letter-spacing: 0.15em;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+.is-style-industry-eyebrow:not(.has-text-color) {
+	color: var(--wp--preset--color--primary);
+}
+
+/* The template's coloured line above a heading, in sentence case. */
+.industry-kicker {
+	color: var(--wp--preset--color--primary);
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 400;
+}
+
+/* The template's one-liner between a heading and its copy. */
+.industry-lede {
+	color: var(--wp--preset--color--contrast);
+	font-weight: 400;
+}
+
+.industry-section-head {
+	margin-bottom: var(--wp--preset--spacing--60);
+}
+
+.industry-section-head > * {
+	margin-block: 0;
+}
+
+.industry-section-head > * + * {
+	margin-top: 0.625rem;
+}
+
+/* Accent bar (block style: separator › Accent bar). */
+.wp-block-separator.is-style-industry-bar:not(.is-style-wide):not(.is-style-dots) {
+	width: 3.75rem;
+	margin-left: 0;
+	border: 0;
+	border-top: 3px solid var(--wp--preset--color--brand);
+	opacity: 1;
+}
+
+.wp-block-separator.is-style-industry-bar.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ==========================================================================
+   Buttons
+
+   The default button is the template's flat yellow (theme.json), edged in
+   `accent-deep` so it reads as a button on a white page. On hover it turns
+   over: the fill becomes the label colour and the label the fill, which keeps
+   both readable in every palette — the template's own hover, yellow words on
+   white, is 1.8:1.
+   ========================================================================== */
+
+.wp-block-button__link,
+.wp-element-button {
+	transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.wp-block-button:not(.industry-scheme-toggle):not(.industry-play) > .wp-block-button__link:hover,
+.wp-block-button:not(.industry-scheme-toggle):not(.industry-play) > .wp-block-button__link:focus-visible,
+.industry-form__actions .wp-element-button:hover,
+.industry-form__actions .wp-element-button:focus-visible,
+.wp-block-post-comments-form .wp-element-button:hover,
+.wp-block-post-comments-form .wp-element-button:focus-visible {
+	background: var(--wp--preset--color--on-accent);
+	border-color: var(--wp--preset--color--on-accent);
+	color: var(--wp--preset--color--accent);
+}
+
+.industry-caps > .wp-block-button__link {
+	text-transform: uppercase;
+}
+
+/* The about block's wide button, as the template's "Get Started Now". */
+.industry-wide > .wp-block-button__link {
+	padding-left: 3.75rem;
+	padding-right: 3.75rem;
+}
+
+/* Dark (block style: button › Dark). */
+.wp-block-button.is-style-industry-dark > .wp-block-button__link {
+	background: var(--wp--preset--color--contrast);
+	border-color: var(--wp--preset--color--contrast);
+	color: var(--wp--preset--color--base);
+}
+
+/* Outline (block style: button › Outline). */
+.wp-block-button.is-style-industry-outline > .wp-block-button__link {
+	background: transparent;
+	border-color: currentColor;
+	color: var(--wp--preset--color--contrast);
+}
+
+/* On a photograph, a filled button carries a pale hairline: yellow on a
+   darkened photograph is a change of hue more than of light, and the hairline
+   is what makes its edge measurable at 3:1 (WCAG 1.4.11). */
+.wp-block-cover .wp-block-button:not(.industry-scheme-toggle):not(.industry-play):not(.is-style-industry-outline) > .wp-block-button__link,
+.wp-block-cover .industry-form__actions .wp-element-button {
+	border-color: color-mix(in srgb, var(--wp--preset--color--overlay) 60%, var(--wp--preset--color--accent));
+}
+
+/* On the dark footer the newsletter's square button takes the same hairline:
+   a deep accent (steel blue, signal red) is under 3:1 against `dark`. */
+.industry-footer .industry-form__round {
+	border-color: color-mix(in srgb, var(--wp--preset--color--overlay) 60%, var(--wp--preset--color--accent));
+}
+
+/* On a photograph, hovering leaves a white outline, as on the template's hero. */
+.wp-block-cover .wp-block-button:not(.industry-scheme-toggle):not(.industry-play) > .wp-block-button__link:hover,
+.wp-block-cover .wp-block-button:not(.industry-scheme-toggle):not(.industry-play) > .wp-block-button__link:focus-visible,
+.wp-block-cover .industry-form__actions .wp-element-button:hover,
+.wp-block-cover .industry-form__actions .wp-element-button:focus-visible {
+	background: transparent;
+	border-color: var(--wp--preset--color--overlay);
+	color: var(--wp--preset--color--overlay);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+/* The template's hero fills the window below the header. */
+.wp-block-cover.industry-hero--fill {
+	min-height: max(30rem, calc(100vh - var(--industry-header-height))) !important;
+	min-height: max(30rem, calc(100svh - var(--industry-header-height))) !important;
+}
+
+.industry-hero .wp-block-cover__inner-container > .wp-block-group > * {
+	margin-block: 0;
+}
+
+.industry-hero .wp-block-cover__inner-container > .wp-block-group > .industry-hero__title {
+	margin-block: 1.25rem;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.industry-hero__text {
+	margin-bottom: 1.875rem !important;
+}
+
+/* The template's phone hero is a fixed 700px, header included. */
+@media (max-width: 767px) {
+	.wp-block-cover.industry-hero--fill {
+		min-height: 38rem !important;
+	}
+}
+
+/* ==========================================================================
+   Features: three hexagon icons
+   ========================================================================== */
+
+.industry-feature > * {
+	margin-block: 0;
+}
+
+.industry-feature > .wp-block-heading {
+	margin-top: 1.5rem;
+}
+
+.industry-feature > p:not(.industry-hex) {
+	max-width: 17.5rem;
+	margin-top: 1.25rem;
+	margin-inline: auto;
+}
+
+/* The hexagon: an outline drawn by ::before and the icon by ::after, both as
+   masks, so they take the palette. The paragraph is empty, and sized, so the
+   editor draws it too. Hovering the feature fills the hexagon, as the
+   template's hexagons.js did. */
+.industry-hex {
+	position: relative;
+	width: 3.25rem;
+	height: 3.75rem;
+	margin: 0 auto;
+	color: var(--wp--preset--color--muted);
+}
+
+.industry-hex::before,
+.industry-hex::after {
+	content: "";
+	position: absolute;
+	background-color: currentColor;
+	transition: background-color 0.3s ease;
+}
+
+.industry-hex::before {
+	inset: 0;
+	-webkit-mask: url("assets/icons/hexagon.svg") center / contain no-repeat;
+	mask: url("assets/icons/hexagon.svg") center / contain no-repeat;
+}
+
+.industry-hex::after {
+	inset: 28% 24%;
+	-webkit-mask: var(--industry-icon) center / contain no-repeat;
+	mask: var(--industry-icon) center / contain no-repeat;
+}
+
+.industry-feature:hover .industry-hex::before {
+	background-color: var(--wp--preset--color--accent);
+	-webkit-mask-image: url("assets/icons/hexagon-filled.svg");
+	mask-image: url("assets/icons/hexagon-filled.svg");
+}
+
+.industry-feature:hover .industry-hex::after {
+	background-color: var(--wp--preset--color--on-accent);
+}
+
+/* ==========================================================================
+   About, beside the quote form
+   ========================================================================== */
+
+.industry-about-text .wp-block-group > * {
+	margin-block: 0;
+}
+
+.industry-about-text .wp-block-heading {
+	margin-top: 0.625rem;
+	margin-bottom: 1.875rem;
+}
+
+.industry-about-text .industry-lede + p {
+	margin-top: 0.3125rem;
+}
+
+.industry-about-text .wp-block-buttons {
+	margin-top: 1.875rem;
+}
+
+@media (max-width: 413px) {
+	.industry-about-text .wp-block-heading br {
+		display: none;
+	}
+}
+
+/* The quote panel: the form on the template's darkened valves. */
+.wp-block-cover.industry-quote-panel {
+	width: 100%;
+	min-height: 0;
+	margin: 0;
+	padding: 1.875rem;
+	box-sizing: border-box;
+}
+
+.industry-quote-panel .wp-block-cover__inner-container > .wp-block-group > * {
+	margin-block: 0;
+}
+
+.industry-quote-panel .wp-block-heading {
+	margin-bottom: 1.25rem;
+}
+
+/* ==========================================================================
+   Market sectors: photograph cards
+   ========================================================================== */
+
+.industry-sector > * {
+	margin-block: 0;
+}
+
+.industry-sector .industry-sector__photo {
+	overflow: hidden;
+}
+
+.industry-sector .industry-sector__photo,
+.industry-sector .industry-sector__photo img {
+	width: 100%;
+	margin: 0;
+}
+
+.industry-sector .industry-sector__photo img {
+	transition: transform 0.4s ease;
+}
+
+.industry-sector:hover .industry-sector__photo img {
+	transform: scale(1.1) rotate(-2deg);
+}
+
+.industry-sector > .wp-block-heading {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	transition: color 0.3s ease;
+}
+
+.industry-sector:hover > .wp-block-heading {
+	color: var(--wp--preset--color--primary);
+}
+
+@media (max-width: 781px) {
+	.industry-sector {
+		text-align: center;
+	}
+}
+
+/* ==========================================================================
+   Counters: ringed discs over a photograph
+   ========================================================================== */
+
+.industry-counter > * {
+	margin-block: 0;
+}
+
+/* The disc is the accent fill with a hairline ring 24px outside it in the
+   brand colour — the template's two nested circles, drawn as one element with
+   an outline, so the number stays plain editable text. */
+.industry-counter__number {
+	display: grid;
+	place-items: center;
+	box-sizing: border-box;
+	width: 5.625rem;
+	height: 5.625rem;
+	margin: 1.5625rem auto !important;
+	border-radius: 50%;
+	outline: 1px solid var(--wp--preset--color--brand);
+	outline-offset: 1.5rem;
+	background-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--on-accent);
+	font-size: var(--wp--preset--font-size--x-large);
+	font-weight: 600;
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.industry-counter__label {
+	margin-top: 2.5rem !important;
+	font-size: var(--wp--preset--font-size--large);
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+	.industry-counters {
+		flex-wrap: wrap !important;
+	}
+
+	.industry-counters > .wp-block-column {
+		flex-basis: calc(50% - var(--wp--preset--spacing--40)) !important;
+	}
+}
+
+/* ==========================================================================
+   Projects: a captioned mosaic
+   ========================================================================== */
+
+.industry-projects .wp-block-columns {
+	margin-bottom: 0;
+}
+
+.wp-block-image.industry-project {
+	position: relative;
+	margin: 0;
+}
+
+.wp-block-image.industry-project img {
+	width: 100%;
+	transition: opacity 0.3s ease;
+}
+
+.wp-block-image.industry-project:hover img {
+	opacity: 0.85;
+}
+
+/* The narrow tile beside the wide one ends level with it on a desktop. */
+@media (min-width: 782px) {
+	.industry-projects .wp-block-column:has(> .industry-project--fill) {
+		display: flex;
+	}
+
+	.wp-block-image.industry-project--fill {
+		flex: 1 1 auto;
+	}
+
+	.wp-block-image.industry-project--fill img {
+		position: absolute;
+		inset: 0;
+		height: 100%;
+	}
+}
+
+/* The caption sits on the photograph's foot, on its own dark tag. */
+.wp-block-image.industry-project figcaption {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	max-width: calc(100% - 2.5rem);
+	margin: 0;
+	padding: 0.625rem 1.125rem;
+	box-sizing: border-box;
+	background-color: var(--wp--preset--color--dark);
+	color: var(--wp--preset--color--on-dark);
+	font-size: var(--wp--preset--font-size--small);
+	line-height: 1.5;
+	text-align: left;
+	pointer-events: none;
+}
+
+.wp-block-image.industry-project figcaption strong {
+	display: block;
+	color: var(--wp--preset--color--overlay);
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 600;
+}
+
+/* ==========================================================================
+   Client reviews: the play tile and the slider
+   ========================================================================== */
+
+.industry-feedback__row .wp-block-column {
+	min-width: 0;
+}
+
+.wp-block-cover.industry-film {
+	width: 100%;
+	margin: 0;
+}
+
+/* The play button: a dark disc with a white ring, which shows on the yellow
+   wash (a white ring alone would be 1.8:1 against it). */
+.wp-block-button.industry-play > .wp-block-button__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 4rem;
+	height: 4rem;
+	padding: 0;
+	border: 2px solid var(--wp--preset--color--overlay);
+	border-radius: 50%;
+	background: var(--wp--preset--color--dark);
+	color: var(--wp--preset--color--overlay);
+	transition: transform 0.3s ease;
+}
+
+.wp-block-button.industry-play > .wp-block-button__link::before {
+	content: "";
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-left: 0.15rem;
+	background-color: currentColor;
+	-webkit-mask: url("assets/icons/player-play.svg") center / contain no-repeat;
+	mask: url("assets/icons/player-play.svg") center / contain no-repeat;
+}
+
+.wp-block-button.industry-play > .wp-block-button__link:hover,
+.wp-block-button.industry-play > .wp-block-button__link:focus-visible {
+	transform: scale(1.08);
+}
+
+/* Video popup (assets/js/interactions.js). Without JavaScript the play
+   button is an ordinary link to the film. */
+.industry-video-dialog {
+	width: min(960px, 92vw);
+	padding: 0;
+	border: 0;
+	overflow: visible;
+	background: #000;
+}
+
+.industry-video-dialog::backdrop {
+	background: rgb(0 0 0 / 0.85);
+}
+
+.industry-video-dialog iframe {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border: 0;
+}
+
+.industry-video-dialog__close {
+	position: absolute;
+	top: -3rem;
+	right: 0;
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 0;
+	border-radius: 50%;
+	background: rgb(255 255 255 / 0.14);
+	color: #fff;
+	font-size: 1.5rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.industry-video-dialog__close:hover,
+.industry-video-dialog__close:focus-visible {
+	background: rgb(255 255 255 / 0.28);
+}
+
+/* Without JavaScript the slides scroll sideways; with it, dots drive them. */
+.industry-slider {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+	overscroll-behavior-x: contain;
+}
+
+.industry-slider::-webkit-scrollbar {
+	display: none;
+}
+
+.industry-slider > .industry-slide {
+	flex: 0 0 100%;
+	margin: 0 !important;
+	box-sizing: border-box;
+	scroll-snap-align: start;
+}
+
+.industry-quote > * {
+	margin-block: 0;
+}
+
+.industry-quote > * + * {
+	margin-top: 0.875rem;
+}
+
+.industry-quote__name {
+	margin: 0;
+	font-weight: 600;
+}
+
+.industry-feedback--light .industry-quote__name {
+	color: var(--wp--preset--color--contrast);
+}
+
+.industry-quote__role {
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+
+/* Star ratings: five masks, the unlit ones faint. */
+.industry-stars {
+	--industry-stars: 5;
+	position: relative;
+	width: 5.5rem;
+	height: 1rem;
+	margin: 0;
+	background: rgb(255 255 255 / 0.35);
+	-webkit-mask: url("assets/icons/star.svg") left center / 1.1rem 1rem repeat-x;
+	mask: url("assets/icons/star.svg") left center / 1.1rem 1rem repeat-x;
+}
+
+.industry-feedback--light .industry-stars {
+	background: var(--wp--preset--color--divider);
+}
+
+.industry-stars::before {
+	content: "";
+	position: absolute;
+	inset: 0 auto 0 0;
+	width: calc(var(--industry-stars) * 1.1rem);
+	background: var(--wp--preset--color--brand);
+}
+
+.industry-stars--4 {
+	--industry-stars: 4;
+}
+
+.industry-slider__dots {
+	display: flex;
+	gap: 0.625rem;
+	margin-top: 1.5rem;
+}
+
+.industry-slider__dot {
+	width: 0.625rem;
+	height: 0.625rem;
+	padding: 0;
+	border: 0;
+	background: rgb(127 127 127 / 0.5);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.industry-slider__dot[aria-current="true"] {
+	background: var(--wp--preset--color--brand);
+}
+
+.industry-slider__dot:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Latest posts: three cards
+   ========================================================================== */
+
+.industry-news .wp-block-post > * {
+	margin-block: 0;
+}
+
+.industry-news .wp-block-post-featured-image {
+	overflow: hidden;
+}
+
+.industry-news .industry-news__meta {
+	padding: 0.625rem 0;
+	border-bottom: 1px solid var(--wp--preset--color--divider);
+	color: var(--wp--preset--color--muted);
+}
+
+.industry-news .industry-news__meta > * {
+	margin: 0;
+}
+
+.industry-news .wp-block-post-author {
+	align-items: center;
+}
+
+.industry-news .wp-block-post-author__avatar {
+	margin-right: 0.625rem;
+}
+
+.industry-news .wp-block-post-author__avatar img {
+	display: block;
+}
+
+.industry-news .wp-block-post-author__name {
+	margin: 0;
+	color: var(--wp--preset--color--contrast);
+}
+
+.industry-news .wp-block-post-author__name a,
+.industry-news .industry-news__meta a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.industry-news .industry-news__title {
+	margin-top: 1.875rem;
+	text-transform: uppercase;
+}
+
+.industry-news .industry-news__title a:hover,
+.industry-news .industry-news__title a:focus-visible {
+	color: var(--wp--preset--color--primary);
+}
+
+.industry-news .wp-block-post-excerpt {
+	margin-top: 0.75rem;
+}
+
+.industry-news .wp-block-post-excerpt__excerpt {
+	margin: 0;
+}
+
+/* ==========================================================================
+   Process: four steps
+   ========================================================================== */
+
+.industry-step > * {
+	margin-block: 0;
+}
+
+.industry-step__number {
+	padding-top: 1.25rem;
+	border-top: 3px solid var(--wp--preset--color--brand);
+	color: var(--wp--preset--color--primary);
+	font-size: var(--wp--preset--font-size--heading);
+	font-weight: 600;
+	line-height: 1;
+}
+
+.industry-step > .wp-block-heading {
+	margin-top: 1.25rem;
+	margin-bottom: 0.75rem;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+	#process .wp-block-columns {
+		flex-wrap: wrap !important;
+	}
+
+	#process .wp-block-columns > .wp-block-column {
+		flex-basis: calc(50% - var(--wp--preset--spacing--40)) !important;
+	}
+}
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.industry-contact-item {
+	position: relative;
+	min-height: 2rem;
+	padding-left: 3.125rem;
+}
+
+.industry-contact-item::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.1rem;
+	width: 1.75rem;
+	height: 1.75rem;
+	background-color: var(--wp--preset--color--primary);
+	-webkit-mask: var(--industry-icon) center / contain no-repeat;
+	mask: var(--industry-icon) center / contain no-repeat;
+}
+
+.industry-contact-item strong {
+	display: inline-block;
+	margin-bottom: 0.2rem;
+	color: var(--wp--preset--color--contrast);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.industry-contact-item a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.industry-contact-item a:hover,
+.industry-contact-item a:focus-visible {
+	color: var(--wp--preset--color--primary);
+}
+
+/* ==========================================================================
+   Page banner
+   ========================================================================== */
+
+.industry-banner .wp-block-cover__inner-container > .wp-block-group > * {
+	margin-block: 0;
+}
+
+.industry-banner .wp-block-post-title,
+.industry-banner .wp-block-query-title,
+.industry-banner h1 {
+	font-size: var(--wp--preset--font-size--display);
+	font-weight: 700;
+}
+
+.industry-breadcrumb {
+	margin-top: 0.625rem !important;
+	font-size: var(--wp--preset--font-size--small);
+}
+
+.industry-breadcrumb > * {
+	margin: 0;
+	font-size: inherit !important;
+	font-weight: 400 !important;
+	font-family: inherit !important;
+	line-height: 1.6 !important;
+}
+
+.industry-breadcrumb__home {
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.industry-breadcrumb__home::after {
+	content: "";
+	width: 1rem;
+	height: 1rem;
+	background-color: currentColor;
+	-webkit-mask: url("assets/icons/arrow-narrow-right.svg") center / contain no-repeat;
+	mask: url("assets/icons/arrow-narrow-right.svg") center / contain no-repeat;
+}
+
+.industry-breadcrumb a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.industry-breadcrumb a:hover,
+.industry-breadcrumb a:focus-visible {
+	text-decoration: underline;
+}
+
+/* ==========================================================================
+   Blog: the post list, the single post and the sidebar
+   ========================================================================== */
+
+.industry-posts .wp-block-post > * {
+	margin-block: 0;
+}
+
+.industry-posts .wp-block-post-terms {
+	margin-top: 1.875rem;
+}
+
+.industry-posts .wp-block-post-title {
+	margin-top: 1.25rem;
+	font-size: var(--wp--preset--font-size--heading);
+}
+
+.industry-posts .wp-block-post-excerpt {
+	margin-top: 1.25rem;
+}
+
+.industry-posts .wp-block-post-excerpt__excerpt {
+	margin: 0;
+}
+
+.industry-posts .industry-post__meta {
+	margin-top: 1rem;
+}
+
+.industry-post__meta {
+	color: var(--wp--preset--color--muted);
+}
+
+.industry-post__meta a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.industry-post__meta a:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+.wp-block-post-terms a {
+	text-decoration: none;
+}
+
+/* Categories in a list or over a post take the words' colour, as the
+   template's plain "Art, Technology, Fashion" line does. */
+.industry-posts .wp-block-post-terms a,
+.industry-post__meta .wp-block-post-terms a {
+	color: inherit;
+}
+
+.industry-posts .wp-block-post-terms a:hover,
+.industry-post__meta .wp-block-post-terms a:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+/* The single post's own rhythm: photograph, meta line, then the words. */
+.industry-article > .wp-block-post-featured-image {
+	margin-bottom: 0;
+}
+
+.industry-article > .industry-post__meta {
+	margin-top: 1.5rem;
+}
+
+.industry-post-tags a {
+	text-decoration: none;
+}
+
+/* Headings inside an article step down: the section scale (36px h2) is for
+   bands on a page, not for a subheading in a column of copy. */
+.industry-article .wp-block-post-content h2 {
+	margin-top: 2.5rem;
+	font-size: var(--wp--preset--font-size--x-large);
+}
+
+.industry-article .wp-block-post-content h3 {
+	margin-top: 2rem;
+	font-size: var(--wp--preset--font-size--large);
+}
+
+/* A date and a comment count each carry a small icon. */
+.industry-post__meta .wp-block-post-date,
+.industry-comments-count {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+}
+
+.industry-post__meta .wp-block-post-date::before,
+.industry-comments-count::before {
+	content: "";
+	flex: none;
+	width: 1em;
+	height: 1em;
+	background-color: currentColor;
+	-webkit-mask: url("assets/icons/calendar.svg") center / contain no-repeat;
+	mask: url("assets/icons/calendar.svg") center / contain no-repeat;
+}
+
+.industry-comments-count::before {
+	-webkit-mask-image: url("assets/icons/message.svg");
+	mask-image: url("assets/icons/message.svg");
+}
+
+.wp-block-query-pagination {
+	gap: 0.5rem;
+	margin-top: var(--wp--preset--spacing--60);
+}
+
+.wp-block-query-pagination a,
+.wp-block-query-pagination .current {
+	display: inline-grid;
+	place-items: center;
+	min-width: 2.5rem;
+	height: 2.5rem;
+	padding: 0 0.6rem;
+	box-sizing: border-box;
+	border: 1px solid var(--wp--preset--color--divider);
+	color: var(--wp--preset--color--contrast);
+	text-decoration: none;
+}
+
+.wp-block-query-pagination .current,
+.wp-block-query-pagination a:hover {
+	background-color: var(--wp--preset--color--accent);
+	border-color: var(--wp--preset--color--accent-deep);
+	color: var(--wp--preset--color--on-accent);
+}
+
+/* The single post's quotations, as the template's: a pale panel with a rule. */
+.wp-block-quote {
+	margin-inline: 0;
+}
+
+.wp-block-quote p {
+	font-size: var(--wp--preset--font-size--medium);
+}
+
+.wp-block-quote cite {
+	display: block;
+	margin-top: 0.75rem;
+	color: var(--wp--preset--color--contrast);
+	font-size: var(--wp--preset--font-size--small);
+	font-style: normal;
+	font-weight: 500;
+}
+
+.wp-block-post-navigation-link a {
+	color: var(--wp--preset--color--contrast);
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.wp-block-post-navigation-link a:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+/* Bordered box (block style: group › Bordered box) — the sidebar's widgets. */
+.is-style-industry-box {
+	padding: 1.875rem;
+	border: 1px solid var(--wp--preset--color--divider);
+}
+
+.is-style-industry-box > * {
+	margin-block: 0;
+}
+
+.is-style-industry-box > * + * {
+	margin-top: 1.875rem;
+}
+
+.is-style-industry-box ul {
+	margin-bottom: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Categories and archives with counts: name left, count right, ruled. */
+.industry-counts li {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.625rem 0.9375rem;
+	border-bottom: 1px solid var(--wp--preset--color--divider);
+	transition: border-color 0.3s ease;
+}
+
+.industry-counts li:hover {
+	border-color: var(--wp--preset--color--brand);
+}
+
+.industry-counts a {
+	color: var(--wp--preset--color--contrast);
+	text-decoration: none;
+}
+
+.industry-counts a:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+.industry-recent li {
+	display: flow-root;
+	margin-bottom: 1.25rem;
+}
+
+.industry-recent li:last-child {
+	margin-bottom: 0;
+}
+
+.industry-recent .wp-block-latest-posts__featured-image.alignleft {
+	margin: 0 1.25rem 0 0;
+}
+
+.industry-recent .wp-block-latest-posts__featured-image img {
+	width: 4.6875rem;
+	height: 4.6875rem;
+	object-fit: cover;
+}
+
+.industry-recent .wp-block-latest-posts__post-title {
+	display: block;
+	color: var(--wp--preset--color--contrast);
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 600;
+	line-height: 1.5;
+	text-decoration: none;
+}
+
+.industry-recent .wp-block-latest-posts__post-title:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+.industry-recent .wp-block-latest-posts__post-date {
+	margin-top: 0.5rem;
+	color: var(--wp--preset--color--muted);
+	font-size: var(--wp--preset--font-size--small);
+}
+
+.wp-block-tag-cloud.industry-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.wp-block-tag-cloud.industry-tags a,
+.wp-block-tag-cloud a {
+	margin: 0;
+	padding: 0.4rem 0.625rem;
+	border: 1px solid var(--wp--preset--color--divider);
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+	font-weight: 300;
+	text-decoration: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wp-block-tag-cloud a:hover,
+.wp-block-tag-cloud a:focus-visible {
+	background-color: var(--wp--preset--color--accent);
+	border-color: var(--wp--preset--color--accent-deep);
+	color: var(--wp--preset--color--on-accent);
+}
+
+.industry-sidebar .wp-block-search__inside-wrapper {
+	border: 0;
+	padding: 0;
+	background-color: var(--wp--preset--color--surface);
+}
+
+.industry-sidebar .wp-block-search__input {
+	border: 0;
+	background: transparent;
+}
+
+.industry-sidebar .wp-block-search__button {
+	margin: 0;
+	padding: 0.5rem 0.9rem;
+	border: 1px solid var(--wp--preset--color--accent-deep);
+	background: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--on-accent);
+}
+
+.industry-sidebar .wp-block-search__button:hover,
+.industry-sidebar .wp-block-search__button:focus-visible {
+	border-color: var(--wp--preset--color--on-accent);
+	background: var(--wp--preset--color--on-accent);
+	color: var(--wp--preset--color--accent);
+}
+
+/* Comments. */
+.industry-comments .wp-block-post-comments-form {
+	margin-top: var(--wp--preset--spacing--60);
+}
+
+.industry-comments .wp-block-comments-title {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.industry-comments .wp-block-comment-template {
+	padding-left: 0;
+}
+
+.industry-comments .wp-block-comment-template ol {
+	padding-left: var(--wp--preset--spacing--50);
+}
+
+.industry-comments .wp-block-comment-author-name {
+	color: var(--wp--preset--color--contrast);
+	font-weight: 600;
+}
+
+.industry-comments .wp-block-comment-author-name a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.industry-comments .wp-block-comment-date a {
+	color: var(--wp--preset--color--muted);
+	text-decoration: none;
+}
+
+.industry-comments .wp-block-avatar img {
+	border-radius: 0;
+}
+
+.industry-reply a {
+	display: inline-block;
+	padding: 0.4rem 1.25rem;
+	border: 1px solid var(--wp--preset--color--contrast);
+	background-color: var(--wp--preset--color--contrast);
+	color: var(--wp--preset--color--base);
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.industry-reply a:hover,
+.industry-reply a:focus-visible {
+	background-color: transparent;
+	color: var(--wp--preset--color--contrast);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.industry-footer .industry-footer__title {
+	margin-bottom: 1.5625rem;
+}
+
+.industry-footer p {
+	margin-block: 0 1.25rem;
+}
+
+.industry-footer__legal {
+	margin-top: 1.875rem !important;
+}
+
+.industry-footer__legal a {
+	color: var(--wp--preset--color--overlay);
+}
+
+.industry-footer__legal a:hover,
+.industry-footer__legal a:focus-visible {
+	text-decoration: none;
+}
+
+/* Plain icons (block style: social links › Plain icons): the template's bare
+   small icons, in the words' colour. */
+.wp-block-social-links.is-style-industry-plain {
+	gap: 0.25rem 1.25rem;
+}
+
+.wp-block-social-links.is-style-industry-plain .wp-social-link.wp-block-social-link {
+	border-radius: 0;
+	background: none;
+	color: inherit;
+	transition: opacity 0.3s ease;
+}
+
+.wp-block-social-links.is-style-industry-plain .wp-social-link a {
+	padding: 0.25rem;
+	color: inherit;
+}
+
+.wp-block-social-links.is-style-industry-plain .wp-social-link svg {
+	width: 0.875rem;
+	height: 0.875rem;
+}
+
+.wp-block-social-links.is-style-industry-plain .wp-social-link:hover,
+.wp-block-social-links.is-style-industry-plain .wp-social-link:focus-within {
+	opacity: 0.7;
+	transform: none;
+}
+
+.industry-footer .wp-block-social-links.is-style-industry-plain {
+	color: var(--wp--preset--color--overlay);
+}
+
+/* ==========================================================================
+   Scroll reveals (assets/js/interactions.js)
+
+   Hidden only once the script has run and only for what is below the first
+   screen, so a visitor without JavaScript, a crawler, or anyone looking at the
+   top of the page sees content immediately.
+   ========================================================================== */
+
+.industry-motion .industry-reveal {
+	opacity: 0;
+	transform: translate3d(0, 28px, 0);
+	transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+	transition-delay: var(--industry-reveal-delay, 0ms);
+}
+
+.industry-motion .industry-reveal.is-revealed {
+	opacity: 1;
+	transform: none;
+}
+
+/* ==========================================================================
+   Reduced motion: no movement anywhere, content shown at once.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+	.industry-motion .industry-reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+
+	.industry-slider {
+		scroll-behavior: auto;
+	}
+
+	.wp-block-button.industry-play > .wp-block-button__link:hover,
+	.industry-sector:hover .industry-sector__photo img {
+		transform: none;
+	}
+
+	.wp-block-button__link,
+	.wp-element-button,
+	.industry-form__round,
+	.industry-sector .industry-sector__photo img,
+	.wp-block-image.industry-project img,
+	.industry-hex::before,
+	.industry-hex::after {
+		transition: none;
+	}
+}

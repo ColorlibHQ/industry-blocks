@@ -1,0 +1,178 @@
+{
+ "slug": "industry",
+ "name": "Industry",
+ "tint": "#f9f9ff",
+ "accent": "#8a6400",
+ "download": "https://updates.colorlib.com/download/theme/industry.zip",
+ "demo": "https://colorlibhub.com/industry-blocks/",
+ "elementor_demo": "https://colorlibhub.com/industry/",
+ "elementor_repo": "https://github.com/ColorlibHQ/industry",
+ "hero": {
+  "heading": "An industrial theme for firms that design, build and maintain plant",
+  "text": "Industry is a free block theme for manufacturers, engineering contractors and construction firms. A full-screen hero over a port at dusk, service and sector cards, counters that count up, a captioned project mosaic, client reviews beside a video, a blog, and a quote request form that needs no plugin — with eight colour palettes and full site editing throughout.",
+  "image": "industry-block-theme-home.jpg"
+ },
+ "versions": {
+  "heading": "Two versions of Industry",
+  "lede": "The same design, built two ways. Both are free.",
+  "block": {
+   "kicker": "Recommended for new sites",
+   "title": "Block theme",
+   "text": "This download. Everything is edited in WordPress’s own Site Editor, with no plugins: the sections are patterns, with eight colour palettes, a dark mode and a quote form built in."
+  },
+  "elementor": {
+   "kicker": "For sites built with Elementor",
+   "title": "Elementor edition",
+   "text": "The same design built for Elementor, with its own widgets and an appointment form; its companion code ships inside the theme. It needs the free Elementor plugin. The source is free on GitHub."
+  }
+ },
+ "blocks": [
+  {
+   "type": "section",
+   "heading": "A quote form beside the story",
+   "text": "The about band puts the firm’s story next to a quote request on a darkened photograph: service, company, name, email, phone and project details. It validates on the server, carries a nonce and a honeypot, works with JavaScript turned off, and sends to the site’s admin address — or, through one filter, to the CRM you already use.",
+   "image": "industry-block-theme-quote-form.jpg"
+  },
+  {
+   "type": "section",
+   "heading": "Sectors, as photograph cards",
+   "text": "Six market sectors, each a photograph that zooms on hover with a title and a line of copy. The home page shows three; the Services page shows all six, above the four steps of how a project runs.",
+   "image": "industry-block-theme-sectors.jpg"
+  },
+  {
+   "type": "section",
+   "heading": "Finished projects, captioned",
+   "text": "The template’s mosaic of project photographs, each with a caption tag on its foot, opening full size in WordPress’s own lightbox. The Projects page adds a row of three more.",
+   "image": "industry-block-theme-projects.jpg"
+  },
+  {
+   "type": "section",
+   "heading": "Client reviews beside a film",
+   "text": "Reviews with star ratings in a slider that a finger, a trackpad or the square dots can move, beside a play tile that opens the video in a popup. Without JavaScript the play button is an ordinary link to the film.",
+   "image": "industry-block-theme-reviews.jpg"
+  },
+  {
+   "type": "section",
+   "heading": "Eight palettes, checked before release",
+   "text": "Industry, the template’s own yellow, then Hi-vis, Steel, Signal, Machine and Copper, and two dark palettes, Night shift and Graphite. Every one is measured against WCAG AA before the theme is built — text, links, button labels and button edges, in light mode and in dark — and a palette that fails is not written.",
+   "image": "industry-block-theme-colour-palettes.jpg"
+  },
+  {
+   "type": "section",
+   "heading": "Dark mode the visitor controls",
+   "text": "The switch in the header is the visitor’s, separate from the palette you chose. It follows the reader’s system setting until they decide for themselves.",
+   "image": "industry-block-theme-dark-mode.jpg"
+  },
+  {
+   "type": "features",
+   "heading": "What you get"
+  },
+  {
+   "type": "section",
+   "heading": "It has a blog, too",
+   "text": "Case studies, site notes and news from the workshop. Archives, single posts, categories, tags, search and a 404 are all designed rather than inherited, with a sidebar that carries search, categories, recent posts, the archive and a tag cloud.",
+   "image": "industry-block-theme-blog.jpg"
+  },
+  {
+   "type": "faqs",
+   "heading": "Questions"
+  }
+ ],
+ "features": [
+  {
+   "heading": "A site on the first click",
+   "icon": "fa fa-home",
+   "text": "Activate Industry on a new site and it builds six pages — Home, About, Services, Projects, Blog and Contact — with a menu to match. Every word on them is ordinary, editable content."
+  },
+  {
+   "heading": "A quote form without a plugin",
+   "icon": "fa fa-file-text-o",
+   "text": "Service, company, name, email, phone and project details, validated on the server, protected by a nonce and a honeypot, and working with JavaScript turned off."
+  },
+  {
+   "heading": "Projects in a lightbox",
+   "icon": "fa fa-picture-o",
+   "text": "A captioned mosaic of finished jobs, each photograph opening full size in WordPress’s own lightbox, which you can switch off per image."
+  },
+  {
+   "heading": "Counters that count",
+   "icon": "fa fa-tachometer",
+   "text": "Four figures in ringed discs over a photograph count up the first time they come into view. Type a new number and the count follows it."
+  },
+  {
+   "heading": "Eight palettes, five type pairings",
+   "icon": "fa fa-paint-brush",
+   "text": "Every palette is measured against WCAG AA before the theme is built, including white words over the photographs, in light mode and in dark."
+  },
+  {
+   "heading": "Dark mode",
+   "icon": "fa fa-moon-o",
+   "text": "A switch for the visitor, separate from the palette you chose. It follows the reader’s system setting until they pick for themselves."
+  },
+  {
+   "heading": "Your form plugin, styled",
+   "icon": "fa fa-plug",
+   "text": "Contact Form 7, WPForms, Gravity Forms, Fluent Forms, Forminator and Ninja Forms take on the theme’s colours and spacing."
+  },
+  {
+   "heading": "Motion that stays out of the way",
+   "icon": "fa fa-magic",
+   "text": "Sections rise into view and figures count up. Visitors who ask their system for reduced motion see none of it, and one filter switches it off."
+  },
+  {
+   "heading": "Fonts on your own server",
+   "icon": "fa fa-font",
+   "text": "Poppins and Oswald ship with the theme, with Latin Extended, so no visitor’s browser is sent to a font service."
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do I need a plugin?",
+   "a": "No. The quote form, the contact form, the newsletter sign-up and dark mode are part of the theme, and so are the starter pages. WooCommerce is supported if you add it, and is not required."
+  },
+  {
+   "q": "Where do quote requests and messages go?",
+   "a": "To the site’s admin email address, sent with WordPress’s own <code>wp_mail()</code>. If your host cannot send mail, any SMTP plugin fixes it. To send them somewhere else — a CRM, a webhook, a mailing-list plugin — return true from the <code>industry_form_handlers</code> filter and Industry sends nothing of its own. The services listed in the form come from the <code>industry_quote_services</code> filter."
+  },
+  {
+   "q": "Will it overwrite my pages?",
+   "a": "No. The six starter pages are built only on a site that has no pages of its own yet, and only once. Activating Industry over an existing site leaves your pages alone."
+  },
+  {
+   "q": "Which form plugins does it style?",
+   "a": "Contact Form 7, WPForms, Gravity Forms, Fluent Forms, Forminator and Ninja Forms are mapped onto the theme’s own colours and spacing, so a plugin’s form does not look like a different website."
+  },
+  {
+   "q": "Can I change the colours?",
+   "a": "Eight palettes — Industry (the original yellow), Hi-vis, Steel, Signal, Machine, Copper, and the dark Night shift and Graphite — and five type pairings are one click each in the Site Editor under Styles. Each palette restyles every section."
+  },
+  {
+   "q": "Why are the button labels dark rather than white?",
+   "a": "White on the template’s yellow is 1.8:1, far below the 4.5:1 that WCAG AA asks for. The yellow stays, with dark words on it (9:1) and a darker edge so the button still reads as a button on a white page. Links and small coloured text use a deeper amber for the same reason."
+  },
+  {
+   "q": "Can I change the video?",
+   "a": "Yes. Select the play button in the reviews section and paste any YouTube address as its link. It opens in a popup on the page."
+  },
+  {
+   "q": "Can I turn dark mode or the animations off?",
+   "a": "Yes. Add <code>add_filter( 'industry_enable_dark_mode', '__return_false' );</code> or <code>add_filter( 'industry_enable_scroll_animations', '__return_false' );</code> to a child theme or a small plugin. With the animations off, the counters show their figures at once and the reviews slider and video keep working."
+  },
+  {
+   "q": "What is the difference between the two versions?",
+   "a": "The block theme is edited in WordPress’s own Site Editor and needs no plugins. The Elementor edition is the same design built for the Elementor page builder, with its own widgets and an appointment form, its companion code bundled inside the theme; it needs the free Elementor plugin and is available on GitHub. For a new site we recommend the block theme."
+  },
+  {
+   "q": "Is it translation ready?",
+   "a": "Yes. Every string is translatable and <code>languages/industry.pot</code> is included."
+  },
+  {
+   "q": "Does it check for updates?",
+   "a": "Yes, twice a day, because it is distributed outside the WordPress.org theme directory. It sends the theme, WordPress and PHP versions, the locale, whether the site is a multisite, and an identifier derived from the site’s address with the site’s own secret key, so it cannot be turned back into the address. No personal data and no site name. The <code>industry_check_for_updates</code> filter switches it off."
+  }
+ ],
+ "details": "<table style=\"width:100%;border-collapse:collapse;\"><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Requires</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">WordPress 6.6 or newer</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">PHP</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">7.4 or newer</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Tested up to</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">WordPress 7.1</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Licence</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">GNU General Public License v2 or later</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Patterns</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">18 to insert (13 sections, 5 page layouts), plus 13 for the header, footer and templates</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Templates</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">14, plus 3 template parts</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Starter pages</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">6, built on activation, with a menu</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Styles</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">8 colour palettes × 5 type pairings</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Fonts</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">Poppins and Oswald, self-hosted</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Icons</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">Tabler Icons (MIT), drawn in the palette’s colours</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Form plugins</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">Contact Form 7, WPForms, Gravity Forms, Fluent Forms, Forminator, Ninja Forms</td></tr><tr><th style=\"text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid #eee4e4;font-weight:600;white-space:nowrap;vertical-align:top;\">Build step</th><td style=\"padding:10px 0;border-bottom:1px solid #eee4e4;\">None — no npm, no SCSS</td></tr></table>",
+ "seo_title": "Industry – Free Industrial WordPress Theme - %%sitename%%",
+ "seo_description": "Industry is a free WordPress block theme for manufacturers, engineering contractors and construction firms, with a quote form, project gallery, counters and eight colour palettes.",
+ "card": "industry-free-industrial-wordpress-theme.jpg"
+}
